@@ -1,0 +1,33 @@
+<header class="header">
+    <img src="../assets/icons/menu.svg" alt="menu" class="header__hamburguer"
+        (click)="toggleNavBar() ; toggleOpacity()">
+    <div class="header__icon">
+        <!-- <img src="./assets/images/header-image.jpg" alt="Icon" class="header__icon-image"> -->
+    </div>
+    <nav class="nav">
+        <ul class="menu">
+            <li class="menu__item">
+                <a class="menu__link"
+                    [ngClass]="currentLinkStatus() === headerStatus.INDEX  ? 'menu__link--active': 'menu__link--inactive'"
+                    (click)="changeLinkStatusToIndex(); scrollTo('home')">Home</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link"
+                    [ngClass]="currentLinkStatus() === headerStatus.ABOUT  ? 'menu__link--active': 'menu__link--inactive'"
+                    (click)="changeLinkStatusToAbout(); scrollTo('about')">About
+                    Me</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link"
+                    [ngClass]="currentLinkStatus() === headerStatus.SERVICES  ? 'menu__link--active': 'menu__link--inactive'"
+                    (click)="changeLinkStatusToServices(); scrollTo('services')">Services</a>
+            </li>
+            <li class="menu__item">
+                <a class="menu__link"
+                    [ngClass]="currentLinkStatus() === headerStatus.PROJECTS  ? 'menu__link--active': 'menu__link--inactive'"
+                    (click)="changeLinkStatusToProjects(); scrollTo('projects')">Projects</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<shared-nav-bar class="navBar"></shared-nav-bar>

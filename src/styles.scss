@@ -1,1 +1,48 @@
-/* You can add global styles to this file, and also import other style files */
+@font-face {
+  font-family: "Poppins";
+  src: url(/fonts/Poppins/Poppins-Regular.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(/fonts/Roboto/Roboto-Regular.ttf);
+}
+:root {
+  --bg-color: #0d0f1a;
+  --font-main-color: #fff;
+  --font-secondary-color: #d7d7e4;
+  --font-roboto: "Poppins", sans-serif;
+  --header-color: rgb(13, 15, 26, 0.9);
+  --font-secondary-color-test: #f2f2f2;
+  --secondary-color: #df3900;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+a,
+a:link,
+a:visited {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+body {
+  // font-family: var(--font-roboto);
+  // font-family: "Poppins", sans-serif;
+  // font-family: "Roboto", sans-serif;
+  // font-family: "Lato", sans-serif;
+  background-color: var(--bg-color);
+  color: var(--font-main-color);
+}

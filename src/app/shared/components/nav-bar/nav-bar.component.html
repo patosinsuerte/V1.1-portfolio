@@ -1,0 +1,27 @@
+<div class="menu-opacity" [ngClass]="{ 'menu-opacity--active': navBarService.opacity}"></div>
+<nav class="lateral"
+    [ngClass]="{ 'lateral--active': navBarService.navBarIsActive, 'lateral--desactivate': !navBarService.navBarIsActive, 'lateral--show': navBarService.navBarIsActive}">
+    <ul class="lateral__menu">
+        <li class="lateral__item">
+            <a class="lateral__link"
+                [ngClass]="currentLinkStatus() === headerStatus.INDEX ? 'lateral__link--active': 'lateral__link--inactive'"
+                (click)="scrollTo('home'); changeLinkStatusToIndex();offNavMenu(); offOpacity()">Inicio</a>
+        </li>
+        <li class="lateral__item">
+            <a class="lateral__link"
+                [ngClass]="currentLinkStatus() === headerStatus.ABOUT  ? 'lateral__link--active': 'lateral__link--inactive'"
+                (click)="scrollTo('about'); changeLinkStatusToAbout();offNavMenu(); offOpacity()">About</a>
+        </li>
+        <li class="menu__item">
+            <a class="lateral__link"
+                [ngClass]="currentLinkStatus() === headerStatus.SERVICES  ? 'lateral__link--active': 'lateral__link--inactive'"
+                (click)="scrollTo('services'); changeLinkStatusToServices(); offNavMenu(); offOpacity()">Services</a>
+        </li>
+        <li class="lateral__item">
+            <a class="lateral__link"
+                [ngClass]="currentLinkStatus() === headerStatus.PROJECTS  ? 'lateral__link--active': 'lateral__link--inactive'"
+                (click)="scrollTo('projects'); changeLinkStatusToProjects();offNavMenu(); offOpacity()">Proyects</a>
+        </li>
+    </ul>
+    <img src="../assets/icons/x.svg" alt="X" class="lateral__x" (click)="offNavMenu(); offOpacity()">
+</nav>

@@ -1,0 +1,154 @@
+/**MOBIL*/
+
+.box {
+    height: auto;
+    min-height: 700px;
+    width: 100%;
+    padding: 1em;
+    padding-bottom: 3em;
+    padding-top: 2em;
+}
+
+.proyects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5em;
+    width: 100%;
+}
+
+.proyects__titles {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+}
+
+.proyects__title {
+    font-size: 2rem;
+    color: var(--font-primary-color);
+    font-weight: 600;
+    width: 400px;
+    border-bottom: rgb(128, 128, 128, 0.2) solid 0.1px;
+    letter-spacing: 2px;
+    font-family: "Poppins", sans-serif;
+    padding-bottom: 0.5em;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 2em;
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+    @media screen and (min-width: 900px) {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.card__images {
+    max-width: 400px;
+    height: 200px;
+    display: flex;
+}
+
+.card__image {
+    width: 100%;
+    transition: transform 0.3s ease;
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+.card__information {
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    align-items: center;
+
+    @media screen and (min-width: 900px) {
+        align-items: flex-start;
+    }
+}
+
+.card__text {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: left;
+    padding: 1em;
+    align-items: center;
+
+    @media screen and (min-width: 900px) {
+        max-width: 500px;
+        align-items: flex-start;
+    }
+}
+
+.card__title {
+    font-size: 1.5rem;
+    font-family: "Roboto", sans-serif;
+}
+
+.card__description {
+    max-width: 400px;
+    color: var(--font-secondary-color-test);
+    font-size: 0.9rem;
+    font-family: "Roboto", sans-serif;
+    line-height: 1.8;
+
+    @media screen and (min-width: 900px) {
+        max-width: 500px;
+    }
+}
+
+.card__tags {
+    padding: 1em;
+    display: flex;
+    gap: 1em;
+}
+
+.card__tag {
+    border: none;
+    outline: none;
+    color: #fff;
+    background-color: transparent;
+    padding: 0.8em;
+    width: auto;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    border: solid #fff 1px;
+}
+
+.card__tag:hover {
+    cursor: auto;
+    border: solid var(--secondary-color) 1px;
+}
+
+.card__tag-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    border: solid #fff 1px;
+    border-radius: 15px;
+    width: auto;
+    height: auto;
+    padding: 0.8em;
+}
+
+.card__tag-div:hover {
+    border: solid var(--secondary-color) 1px;
+}
